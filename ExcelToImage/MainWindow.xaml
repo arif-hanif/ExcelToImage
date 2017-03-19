@@ -1,12 +1,14 @@
-﻿<Window x:Class="ExcelToImage.MainWindow"
+﻿<Window x:Name="Convert_Excel_to_PNG" x:Class="ExcelToImage.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExcelToImage"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Convert Excel to PNG" Height="149.5" Width="526">
     <Grid>
-        
+        <Button x:Name="button" Content="Browse..." HorizontalAlignment="Left" Margin="218,10,0,0" VerticalAlignment="Top" Width="97" Click="button_Click"/>
+        <TextBox x:Name="textBox" Margin="10,55,10,10" TextWrapping="Wrap" FontSize="10" HorizontalContentAlignment="Center"/>
+
     </Grid>
 </Window>
