@@ -60,10 +60,13 @@ namespace ExcelToImage
 
             // Create Workbook instance and load file
             Workbook workbook = new Workbook();
-            //workbook.LoadFromFile(fileXls);
+            workbook.LoadFromFile(fileXls);
+            Worksheet sheet = workbook.Worksheets[0];
+
+            //Hiding the gridlines for the first worksheet
+            sheet.GridLinesVisible = false;
 
             // Save to image
-            Worksheet sheet = workbook.Worksheets[0];
             string savedImage = fileXlsFolder + fileXlsFilename + ".png";
             sheet.SaveToImage(savedImage, 1, 1, 7, 14);
 
